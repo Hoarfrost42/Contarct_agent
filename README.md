@@ -244,4 +244,3 @@ Contract-AI-Agent/
 | [evaluation/BENCHMARK_GENERATION_GUIDE.md](./evaluation/BENCHMARK_GENERATION_GUIDE.md) | 评测数据集生成指南 |
 
 ---
-*Created by Antigravity Agent • 2025-12-29*
