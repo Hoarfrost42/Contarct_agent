@@ -69,7 +69,7 @@
 
 ### 5. 🛡️ 智能预处理与风险检测
 *   **开场白过滤**: 自动识别合同开头的程序性内容（如"甲乙双方协商一致签订本合同"），避免误报。
-*   **薪资结构失衡检测**: 自动解析薪资条款，当底薪占比低于 40% 时发出警告（防止"高绩效低底薪"陷阱）。
+*   e.g **薪资结构失衡检测**: 自动解析薪资条款，当底薪占比低于 40% 时发出警告（防止"高绩效低底薪"陷阱）。
 
 ### 6. 🤖 LLM 深度推理与反思
 *   **三级风险定义标准**:
@@ -201,8 +201,8 @@ python start_reflex.py
 | `system_config.max_concurrency` | `5` | 并发分析的条款数量，显存越大可调越大 |
 | `llm_config.model_name` | `qwen3:4b-instruct` | 使用的 LLM 模型名称，需与 Ollama 一致 |
 | `llm_config.temperature` | `0` | 模型生成的随机度，法律场景建议低值以保准确 |
-| `hybrid_search_config.threshold` | `0.7` | 规则匹配的最低置信度阈值 |
-| `hybrid_search_config.alpha` | `0.7` | 混合检索权重系数 (0.7 代表 70% 语义 + 30% 关键词) |
+| `hybrid_search_config.threshold` | `0.75` | 规则匹配的最低置信度阈值 |
+| `hybrid_search_config.alpha` | `0.65` | 混合检索权重系数 (0.65 代表 65% 语义 + 35% 关键词) |
 
 ---
 
