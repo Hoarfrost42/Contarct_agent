@@ -116,13 +116,13 @@
 
 | 指标 | 描述 |
 |------|------|
-| `accuracy` | 风险等级预测正确率 |
-| `precision` | TP / (TP + FP) |
-| `recall` | TP / (TP + FN) |
-| `f1` | Precision 与 Recall 调和平均 |
-| `hallucination_rate` | 证据不在原文中的比例 |
-| `risk_id_accuracy` | 正例样本风险识别准确率 |
-| `avg_latency_sec` | 平均响应时间（秒） |
+| **Weighted Accuracy** | 加权准确率 (精确匹配得1分，偏差一级得0.5分，偏差两级得0分) |
+| **Kappa (QWK)** | 二次加权 Kappa 系数，衡量有序分类的一致性，惩罚严重的错判 |
+| **Macro-F1** | 宏平均 F1 分数，综合衡量 High/Medium/Low 三类的平衡表现 |
+| **Task Success Rate** | 任务成功率 (同时满足解析成功、风险等级可接受、证据有效、有修改建议) |
+| **Hallucination Rate** | 幻觉率 (证据无法在原文中找到的比例) |
+| **Rule Recall** | 规则召回率 (正确触发的规则数 / 应触发的规则数) |
+| **Avg Latency** | 平均单条样本响应时间 (秒) |
 
 ### 运行评测
 
